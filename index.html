@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Happy Valentine’s Day ❤️</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: url("photo-collage.png.png") no-repeat center center fixed;
+      background-size: cover;
+      height: 100vh;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      text-align: center;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.15);
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+      max-width: 400px;
+      backdrop-filter: blur(8px);
+    }
+
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 1.1rem;
+      margin-bottom: 20px;
+    }
+
+    button {
+      background: #ff4d6d;
+      border: none;
+      padding: 12px 25px;
+      font-size: 1rem;
+      color: white;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: transform 0.2s, background 0.3s;
+      margin-top: 15px;
+    }
+
+    button:hover {
+      background: #ff1e4d;
+      transform: scale(1.05);
+    }
+
+    
+    textarea {
+      width: 100%;
+      height: 400px;
+      border-radius: 15px;
+      border: none;
+      padding: 15px;
+      font-size: 14px;
+      resize: none;
+      outline: none;
+      background-color: #ffc0cb; 
+      color: #8b004f;
+      margin-top: 15px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    }
+
+    .heart {
+      position: absolute;
+      color: #ff4d6d;
+      font-size: 20px;
+      animation: floatUp 5s linear infinite;
+      opacity: 0.8;
+    }
+
+    @keyframes floatUp {
+      0% {
+        transform: translateY(100vh) scale(0.8);
+        opacity: 0;
+      }
+      10% {
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(-10vh) scale(1.2);
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <h1>Happy Valentine’s Day Baby!💕</h1>
+    <p>You make my world brighter every single day.</p>
+
+    <!-- 💌 TEXT NASA MISMO SA CODE -->
+    <textarea>
+Happy Valentine’s Day my baby chikay! 💕
+
+I just want you to know how much I love you.
+Thank you for being my happiness, my comfort,
+and my favorite person in the world.
+Forever and always, I’m sorry because I don’t 
+have flowers to give you tomorrow. Actually, I 
+feel shy because I’m still courting you, and I 
+feel like I wasn’t able to give you the flowers 
+you deserve this February 14. But I hope that with
+what I made for you, even though it’s simple, 
+you’ll still like it.
+
+I also want to thank you for everything for all our 
+playful moments, our teasing, and our laughter. 
+I’ve only felt that kind of happiness with you. Even 
+when I fall asleep without saying goodnight (I’m really 
+just that sleepy sometimes), thank you for understanding. 
+I truly appreciate everything especially all the things 
+you do for me. Don’t worry, because I will never change 
+the way I treat you, no matter what mood I’m in. And don’t 
+worry even if you’re a little mean to me sometimes, I would 
+never replace you.
+
+That’s all. I hope you like what I made for you.
+
+Thank you so much, and I love you more than you know po!!! 💖 ❤️
+    </textarea>
+
+    <button onclick="showLove()">❤️</button>
+  </div>
+
+  <script>
+    function showLove() {
+      alert("I’m so lucky to have you. Happy Valentine’s Day babyyy ko!!!!💕");
+    }
+
+    function createHeart() {
+      const heart = document.createElement("div");
+      heart.classList.add("heart");
+      heart.innerHTML = "❤️";
+      heart.style.left = Math.random() * 100 + "vw";
+      heart.style.fontSize = Math.random() * 20 + 15 + "px";
+      heart.style.animationDuration = Math.random() * 3 + 3 + "s";
+      document.body.appendChild(heart);
+
+      setTimeout(() => {
+        heart.remove();
+      }, 5000);
+    }
+
+    setInterval(createHeart, 300);
+  </script>
+
+</body>
+</html>
